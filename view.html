@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Recipes</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffafc;
+            padding: 20px;
+            text-align: center;
+            color: #5e1a5f;
+        }
+        h1 {
+            color: #8b3e77;
+            margin-bottom: 20px;
+        }
+        #category-buttons {
+            margin-bottom: 20px;
+        }
+        .cat-btn {
+            background-color: #f7e9f3;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            margin: 0 10px 10px 0;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            color: #5e1a5f;
+            box-shadow: 1px 1px 5px #d4a5c3;
+        }
+        .cat-btn:hover, .cat-btn.active {
+            background-color: #bc5090;
+            color: white;
+            box-shadow: 1px 1px 10px #9b3a75;
+        }
+        #search {
+            padding: 10px;
+            width: 60%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            font-size: 16px;
+            outline-color: #bc5090;
+        }
+        #recipe-list {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        #recipe-list li {
+            margin: 8px 0;
+        }
+        #recipe-list a {
+            text-decoration: none;
+            color: #5e1a5f;
+            background-color: #f7e9f3;
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: inline-block;
+            width: 100%;
+            transition: background-color 0.2s ease;
+        }
+        #recipe-list a:hover {
+            background-color: #e2cbe2;
+        }
+        #no-recipes {
+            color: #a56a92;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Recipe Categories</h1>
+
+    <div id="category-buttons">
+        <button class="cat-btn" data-category="Breakfast">Breakfast</button>
+        <button class="cat-btn" data-category="Lunch">Lunch</button>
+        <button class="cat-btn" data-category="Snacks">Snacks</button>
+        <button class="cat-btn" data-category="Dinner">Dinner</button>
+    </div>
+
+    <input type="text" id="search" placeholder="Search recipes..." disabled />
+
+    <ul id="recipe-list">
+        <li id="no-recipes">Please select a category to view recipes.</li>
+    </ul>
+
+</body>
+</html>

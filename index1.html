@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe Raddar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="share-form">
+    <h2>Share Your Recipe</h2>
+    <form id="recipeForm">
+        <label for="name">Recipe Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="ingredients">Ingredients:</label><br>
+        <textarea id="ingredients" name="ingredients" rows="4" required></textarea><br><br>
+
+        <label for="process">Process:</label><br>
+        <textarea id="process" name="process" rows="5" required></textarea><br><br>
+
+        <label for="category">Category:</label>
+    <select id="category" name="category" required>
+        <option value="" disabled selected>Select category</option>
+        <option value="Breakfast">Breakfast</option>
+        <option value="Lunch">Lunch</option>
+        <option value="Snacks">Snacks</option>
+        <option value="Dinner">Dinner</option>
+    </select>
+    <br><br>
+        <button type="submit">Submit Recipe</button>
+    </form>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
